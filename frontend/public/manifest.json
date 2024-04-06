@@ -1,18 +1,23 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "version":"1.0", 
-  "manifest_version": 3,
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "action": {
-    "default_title": "My Apps",
-    "default_popup": "index.html",
-    "default_icon": {
-      "16": "logo192.png",
-      "512": "logo512.png"
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "name": "G2_project",
+    "description": "This is a simple extension ",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting", 
+        "tabs"
+      ],
+    "host_permissions": [
+        "http:///",
+        "https:///"
+    ],
+    "icons":{
+        "16": "image.png",
+        "32": "image.png",
+        "64": "image.png"
     }
-  }
 }
