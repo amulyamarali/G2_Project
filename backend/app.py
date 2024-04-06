@@ -2,7 +2,7 @@
 from flask import Flask, jsonify
 import requests
 import json
-from helper import get_links, get_quest, get_comp, get_feat
+from helper import get_links, get_quest, get_comp, get_feat, extra_quest, extra_q_2
 import csv
 
 import os
@@ -28,6 +28,7 @@ def get_data():
     get_links(ele)
     # Return the data as JSON
     return jsonify(data)
+
 
 # Define route to get features
 @app.route('/get_features', methods=['GET'])
@@ -57,6 +58,7 @@ def get_features():
 
     # Return a success message
     return jsonify({"message": "Features are printed in the console"})
+
 
 # Define route to get all the questions along with the answers
 @app.route('/get_questions', methods=['GET'])
@@ -95,6 +97,27 @@ def get_questions():
 
     # Return a JSON response with a success message
     return jsonify({"message": "Questions are printed in the console"})
+
+@app.route('/get_extra', methods=['GET'])
+def get_extra():
+    # Define headers for the request
+    headers = {
+        "Authorization": f"Token token={secret_key}",
+        "Content-Type": "application/vnd.api+json"
+    }
+
+    # Send GET request to the specified URL
+    response = requests.get('https://data.g2.com/api/v1/survey-responses?page[size]=100', headers=headers)
+    # Parse the JSON response
+    data = response.json()
+    ele = data["data"]
+    # Call helper function to get links
+    extra_quest(ele)
+    extra_q_2(ele)
+
+    # Return a JSON response with a success message
+    return jsonify({"message": "Extra questions are printed in the console"})
+
 
 # Run the Flask application
 if __name__ == '__main__':

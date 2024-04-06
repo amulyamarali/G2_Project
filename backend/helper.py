@@ -10,29 +10,6 @@ def get_links(ele):
             writer.writerow([ele[i]["relationships"]["product"]["links"]["related"], ele[i]["relationships"]["answers"]["links"]["related"]])   
 
 
-def get_feature_links(ele):
-
-    # add a new column to the links.csv file and dont add anything to the prv column
-    with open('links.csv', mode='w') as file:
-        writer = csv.writer(file)
-        writer.writerow(["features_related_links"])
-        for i in range(len(ele)):
-            writer.writerow(ele[i]["relationships"]["product_features"]["links"]["related"])
-
-    return 0
-
-
-
-def get_features(ele):
-
-    with open('features.csv', mode='w') as file:
-        writer = csv.writer(file)
-        # writer.writerow(["features_name", "description","section_title"])
-        for i in range(len(ele)):
-            writer.writerow([ele[i]["relationships"]["product"]["links"]["related"], ele[i]["relationships"]["answers"]["links"]["related"]])  
-
-    return 0
-
 
 def get_quest(ele, link):
     with open('questions.csv', mode='a', newline='') as file:
@@ -66,3 +43,27 @@ def get_feat(ele):
             writer.writerow([ele[i]["attributes"]["text"],
                             str(ele[i]["attributes"]["description"]).replace('\n', '').replace('\r', ' '),
                             ele[i]["attributes"]["section_title"]])
+            
+
+def extra_quest(ele):
+    with open('questions.csv', mode='a', newline='') as file:
+        writer = csv.writer(file)
+        for i in range(len(ele)):
+            if "recommendations" in ele[i]["attributes"]["comment_answers"]:
+                writer.writerow([0, 
+                                 ele[i]["attributes"]["comment_answers"]["recommendations"]["text"], 
+                                 "recommendations", 
+                                 str(ele[i]["attributes"]["comment_answers"]["recommendations"]["value"]).replace('\n', '').replace('\r', ' ')])
+
+
+def extra_q_2(ele):
+    with open('questions.csv', mode='a', newline='') as file:
+        writer = csv.writer(file)
+        for i in range(len(ele)):
+            if "ease_of_doing_business_with" in ele[i]["attributes"]["secondary_answers"]:
+                writer.writerow([1000, 
+                                 ele[i]["attributes"]["secondary_answers"]["ease_of_doing_business_with"]["text"], 
+                                 "ease_of_doing_business_with", 
+                                 str(ele[i]["attributes"]["secondary_answers"]["ease_of_doing_business_with"]["value"]).replace('\n', '').replace('\r', ' ')])
+
+    return 
