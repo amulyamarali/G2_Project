@@ -1,0 +1,75 @@
+[
+    {
+        "feature_type": "Data Availability",
+        "count": 3,
+        "features": [
+            "Contact Data Availability",
+            "Account Data Availability",
+            "Offline Data"
+        ]
+    },
+    {
+        "feature_type": "Review Platform",
+        "count": 5,
+        "features": [
+            "Review Search",
+            "Review Platform",
+            "Product Content",
+            "Research Reports",
+            "Category and Product Taxonomy"
+        ]
+    },
+    {
+        "feature_type": "Consumer Intelligence",
+        "count": 3,
+        "features": [
+            "Customer Feedback",
+            "Competitive Intelligence",
+            "Sentiment Analysis"
+        ]
+    },
+    {
+        "feature_type": "Reporting",
+        "count": 2,
+        "features": [
+            "Revenue Reporting",
+            "Corporate Reporting",
+            "Dashboard"
+        ]
+    },
+    {
+        "feature_type": "Media Monitoring",
+        "count": 3,
+        "features": [
+            "Social Networks Monitoring",
+            "Social Media Management",
+            "Digital Media Monitoring"
+        ]
+    },
+    {
+        "feature_type": "Platform Additional Functionality",
+        "count": 5,
+        "features": [
+            "Integrations",
+            "Topic Customization",
+            "Natural Language Processing (NLP)",
+            "Alerts",
+            "Real-time Intent"
+        ]
+    },
+    {
+        "feature_type": "In-House Management",
+        "count": 2,
+        "features": [
+            "Employee Performance",
+            "Team Workflow"
+        ]
+    },
+    {
+        "feature_type": "Generative AI",
+        "count": 1,
+        "features": [
+            "Text Generation"
+        ]
+    }
+]

@@ -1,4 +1,11 @@
 import csv
+import os
+import openai
+
+from dotenv import load_dotenv
+load_dotenv()  
+API_KEY = os.getenv('API_KEY')
+openai.api_key = API_KEY
 
 
 def get_links(ele):
@@ -66,4 +73,14 @@ def extra_q_2(ele):
                                  "ease_of_doing_business_with", 
                                  str(ele[i]["attributes"]["secondary_answers"]["ease_of_doing_business_with"]["value"]).replace('\n', '').replace('\r', ' ')])
 
-    return 
+
+
+# Function to interact with OpenAI API
+def query_openai_api(content, query):
+    response = openai.completions.create(
+        model="gpt-3.5-turbo-instruct",
+        prompt=content + "User: " + query + "AI:",
+        max_tokens=150,
+        temperature=0.5
+    )
+    return response.choices[0].text
