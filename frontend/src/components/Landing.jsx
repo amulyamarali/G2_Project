@@ -9,7 +9,8 @@ function Landing() {
         <div>
             {/* <NavBar /> */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', height: '100vh'}}>
-                <h1>This is the landing page</h1>
+                {/* <NavBar /> */}
+                <h1>Welcome to G2 Marketing Solutions</h1>
             </div>
         </div>
     )

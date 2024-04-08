@@ -17,9 +17,9 @@ defaults.plugins.title.color = "black";
 
 function Features() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', marginBottom:"100px" }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '150vh', marginTop:"10px" }}>
             {/* <NavBar /> */}
-            <div className="dataCard categoryCard" style={{ height: '1000%', width: '400px', overflow: 'auto'  }}>
+            <div className="dataCard categoryCard" style={{ height: '400%', width: '400px', overflow: 'auto'  }}>
                 <Doughnut
                     data={{
                         labels: source.sort((a, b) => a.feature_type.localeCompare(b.feature_type)).map((data) => data.feature_type),

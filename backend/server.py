@@ -32,9 +32,11 @@ def chat():
     data = request.json
     query = data.get('query')
 
-    response = query_openai_api(content, query)
+    # response = query_openai_api(content, query)
     
-    return jsonify({'message': response})
+    # return jsonify({'message': response})
+
+    return jsonify({'message': query})
 
 if __name__ == '__main__':
     
