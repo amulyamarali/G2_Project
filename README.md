@@ -36,4 +36,39 @@ npm run dev
 ```
 once the ```dist``` folder is created, follow the below steps: 
 
-Chrome extension settings > Toggle the Developer Mode > Load unpacked > Add the `dist` folder of this project
+**Chrome extension settings > Toggle the Developer Mode > Load unpacked > Add the `dist` folder of this project**
+
+If the steps are correctly followed then should be able to see the **G2 logo** in your extensions bar
+
+![alt text](image-1.png)
+
+
+2) To run the server
+
+```bash
+cd ..
+cd backend
+python server.py
+```
+Don't forget to add your own `.env` with **openai api key** and the **secret token** in the `backend` folder.
+
+If the `server.py` runs fine then you should be able to see `Running on http://127.0.0.1:3000` in the terminal. 
+
+
+### Now you can start using this extension !!!
+
+
+## Ouput
+### 1) For the **Chatbot**
+<img src="image-2.png" alt="alt text" width="400"/>
+
+
+### 2) For the **Features**
+<img src="image-3.png" alt="alt text" width="400"/>
+
+<img src="image-4.png" alt="alt text" width="400"/>
+
+
+### 3) For the **Analysis**
+<img src="image-5.png" alt="alt text" width="400"/>
+
