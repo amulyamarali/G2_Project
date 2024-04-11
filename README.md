@@ -32,6 +32,7 @@ open the folder in your favourite IDE
 1) To build the extension 
 ```bash 
 cd frontend
+npm install
 npm run dev
 ```
 once the ```dist``` folder is created, follow the below steps: 
