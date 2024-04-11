@@ -80,7 +80,7 @@ def query_openai_api(content, query):
     response = openai.completions.create(
         model="gpt-3.5-turbo-instruct",
         prompt=content + "User: " + query + "AI:",
-        max_tokens=200,
+        max_tokens=500,
         temperature=0.5
     )
     return response.choices[0].text

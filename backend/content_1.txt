@@ -1,0 +1,27 @@
+Features of G2 Marketing solution:
+feature_name,description,section_title
+Contact Data Availability,Provides detailed contact-level buyer intent data ,Data Availability
+Account Data Availability,Provides aggregated intent data for individual contacts to supply an account-level view of intent,Data Availability
+Offline Data,Ability to connect offline databases to collect information that can be matched to online devices,Data Availability
+Review Search,Ability to easily search for and filter technology product reviews depending on requirements.,Review Platform
+Review Platform,"Allows users to submit new technology reviews, as well as edit exisiting reviews.",Review Platform
+Product Content,Provides valuable company and/or product descriptions alongside reviews.,Review Platform
+Research Reports,Provides research reports on technology software categories.,Review Platform
+Category and Product Taxonomy,Provides an in depth category taxonomy that compares like-products in a clear way.,Review Platform
+Customer Feedback,Provides a forum for customers to give feedback and data storage for company analysis.,Consumer Intelligence
+Competitive Intelligence,Allows users to get real-time information on competitors performance and reputation.,Consumer Intelligence
+Sentiment Analysis,Gives users greater visibility into the how feel and respond to reputation gaining tactics.,Consumer Intelligence
+Revenue Reporting,Provides tools with enhanced filtering and correlation between revenue and reputation.,Reporting
+Corporate Reporting,Helps monitor the overall performance of marketing efforts and brand establishment.,Reporting
+Dashboard,Provides a centralized hub and management tools for all data points related to online reputation.,Reporting
+Social Networks Monitoring,Helps track and monitor social media trends and interactions.,Media Monitoring
+Social Media Management,Helps manage social messaging and measures the full impact of social campaigns.,Media Monitoring
+Digital Media Monitoring,Helps manage ad messaging and measures the full impact of digital advertising campaigns.,Media Monitoring
+Integrations,"Ability for the product to integrate with software to view and utilize contact and account buyer intent data (i.e. CRM software, marketing automation software, account- based marketing software, etc.)",Platform Additional Functionality
+Topic Customization,Provides the ability to customize the relevant topics that are tracked,Platform Additional Functionality
+Natural Language Processing (NLP),Provides natural language processing (NLP) to identify topics within content (i.e. number of people researching a topic from a business),Platform Additional Functionality
+Alerts,"Provides buyer intent alerts that can be delivered in a variety of formats (i.e. email, text message, etc.)",Platform Additional Functionality
+Real-time Intent,Ability to provide a dashboard showcasing intent that streams in real-time (as opposed to bulk deliveries),Platform Additional Functionality
+Employee Performance,Gives visibility into employee performance and each individual's impact on reputation initiatives.  ,In-House Management
+Team Workflow,Helps establish a workflow that allows team members to communicate effectively and collaboratively. ,In-House Management
+Text Generation,Allows users to generate text based on a text prompt.,Generative AI
