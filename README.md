@@ -22,6 +22,9 @@ printed on the console.
 
 By integrating the robust features of a Chrome extension, an AI-powered chatbot, and G2's comprehensive API endpoints, users can effortlessly access and analyze G2 reviews to pinpoint customer requests for a wide array of products and services. This all-encompassing solution approach harnesses advanced technologies such as Natural Language Processing (NLP) and conversational AI to deliver actionable insights, thereby facilitating informed decision-making. Additionally, it showcases the powerful features of G2, providing a holistic view of customer feedback. 🚀
 
+### Video recording 
+https://www.loom.com/share/602187cedf364587acacbe81abf2e4c8?sid=dd87f673-5b79-4ad5-b8d1-cb84b44c505c
+
 ## How to run?
 
 ``` git clone https://github.com/amulyamarali/G2_Project.git```
