@@ -33,7 +33,7 @@ open the folder in your favourite IDE
 ```bash 
 cd frontend
 npm install
-npm run dev
+npm run build
 ```
 once the ```dist``` folder is created, follow the below steps: 
 
