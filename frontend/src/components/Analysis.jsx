@@ -40,6 +40,35 @@ const pieData = {
     "6.0": 1
 };
 
+const reqData = {
+    "6.0": 5,
+    "7.0": 13
+}
+
+const role = {
+    "Executive Sponsor": 15,
+    "Administrator": 35,
+    "User": 31,
+    "Internal Consultant": 2
+}
+
+const industry = {
+    "Computer Software": 27,
+    "Information Services": 2,
+    "Internet": 13,
+    "Accounting": 4,
+    "Logistics and Supply Chain": 4,
+    "Education Management": 1,
+    "Information Technology and Services": 10,
+    "Human Resources": 3,
+    "Marketing and Advertising": 3,
+    "Computer & Network Security": 2,
+    "E-Learning": 1,
+    "Consumer Services": 1,
+    "Public Relations and Communications": 1,
+    "Financial Services": 1
+}
+
 
 function Analysis() {
     const labels = Object.keys(data);
@@ -51,10 +80,19 @@ function Analysis() {
     const pieLabels = Object.keys(pieData);
     const pieCounts = Object.values(pieData);
 
+    const reqLabels = Object.keys(reqData);
+    const reqCounts = Object.values(reqData);
+
+    const roleLabels = Object.keys(role);
+    const roleCounts = Object.values(role);
+
+    const industryLabels = Object.keys(industry);
+    const industryCounts = Object.values(industry);
+
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '200vh', }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '400vh', }}>
             {/* <NavBar /> */}
-            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px', overflow: "auto", marginLeft:"20px" }}>
+            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px', overflow: "auto", marginLeft: "20px" }}>
                 <Doughnut
                     data={{
                         labels: labels,
@@ -95,7 +133,7 @@ function Analysis() {
                 />
             </div>
 
-            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft:"20px" }}>
+            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft: "20px" }}>
                 <Bar
                     data={{
                         labels: labels2,
@@ -136,7 +174,7 @@ function Analysis() {
                 />
             </div>
 
-            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft:"20px" }}>
+            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft: "20px" }}>
                 <Pie
                     data={{
                         labels: pieLabels,
@@ -168,6 +206,118 @@ function Analysis() {
                         plugins: {
                             title: {
                                 text: "NPS Data",
+                            },
+                        },
+                    }}
+                />
+            </div>
+
+            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px', marginTop: "30px",  overflow: "auto", marginLeft: "20px" }}>
+                <Bar
+                    data={{
+                        labels: reqLabels,
+                        datasets: [
+                            {
+                                label: "Count",
+                                data: reqCounts,
+                                backgroundColor: [
+                                    "rgba(43, 63, 229, 0.8)",
+                                    "rgba(250, 192, 19, 0.8)",
+                                ],
+                            }
+                        ]
+                    }}
+                    options={{
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            title: {
+                                text: "Score for Meeting Requirements",
+                            },
+                        }
+                    }}
+                />
+            </div>
+
+            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft: "20px" }}>
+                <Doughnut
+                    data={{
+                        labels: roleLabels,
+                        datasets: [
+                            {
+                                label: "Count",
+                                data: roleCounts,
+                                backgroundColor: [
+                                    "rgba(43, 63, 229, 0.8)",
+                                    "rgba(250, 192, 19, 0.8)",
+                                    "rgba(253, 135, 135, 0.8)",
+                                    "rgba(75, 192, 192, 0.8)",
+                                    "rgba(153, 102, 255, 0.8)"
+                                ],
+                                borderColor: [
+                                    "rgba(43, 63, 229, 0.8)",
+                                    "rgba(250, 192, 19, 0.8)",
+                                    "rgba(253, 135, 135, 0.8)",
+                                    "rgba(75, 192, 192, 0.8)",
+                                    "rgba(153, 102, 255, 0.8)"
+                                ],
+                                borderWidth: 1,
+                            },
+                        ],
+                    }}
+                    options={{
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            title: {
+                                text: "Primary role of the user when using G2 Marketing Solutions",
+                            },
+                        },
+                    }}
+                />
+            </div>
+
+            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px',  marginTop: "30px", overflow: "auto", marginLeft: "20px" }}>
+            <Bar
+                    data={{
+                        labels: industryLabels,
+                        datasets: [
+                            {
+                                label: "Count",
+                                data: industryCounts,
+                                backgroundColor: [
+                                    "rgba(43, 63, 229, 0.8)",
+                                    "rgba(250, 192, 19, 0.8)",
+                                    "rgba(253, 135, 135, 0.8)",
+                                    "rgba(75, 192, 192, 0.8)",
+                                    "rgba(153, 102, 255, 0.8)"
+                                ],
+                                borderColor: [
+                                    "rgba(43, 63, 229, 0.8)",
+                                    "rgba(250, 192, 19, 0.8)",
+                                    "rgba(253, 135, 135, 0.8)",
+                                    "rgba(75, 192, 192, 0.8)",
+                                    "rgba(153, 102, 255, 0.8)"
+                                ],
+                                borderWidth: 1,
+                            },
+                        ],
+                    }}
+                    options={{
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            title: {
+                                text: "Industries using this product",
                             },
                         },
                     }}

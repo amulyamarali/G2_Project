@@ -3,6 +3,7 @@ import axios from 'axios';
 import NavBar from './NavBar';
 import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import Landing from './Landing';
+import { BeatLoader } from 'react-spinners';
 
 function Chat() {
     const [messages, setMessages] = useState([{ text: 'Hey, how can I help you?', sender: 'bot' }]);
@@ -40,7 +41,7 @@ function Chat() {
                     </div>
                 </div>
             ))}
-            {isLoading && <p>Loading...</p>}
+            {isLoading ? <BeatLoader /> : null}
             <input 
                 value={input} 
                 onChange={e => setInput(e.target.value)} 
