@@ -59,7 +59,7 @@ If the `server.py` runs fine then you should be able to see `Running on http://1
 ### Now you can start using this extension !!!
 
 
-## Ouput
+## Output
 ### 1) For the **Chatbot**
 <img src="image-2.png" alt="alt text" width="400"/>
 
