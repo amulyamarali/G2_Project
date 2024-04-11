@@ -49,6 +49,7 @@ If the steps are correctly followed then should be able to see the **G2 logo** i
 ```bash
 cd ..
 cd backend
+pip install -r requirements.txt
 python server.py
 ```
 Don't forget to add your own `.env` with **openai api key** and the **secret token** in the `backend` folder.
