@@ -7,27 +7,27 @@ function NavBar() {
         <div style={{ display: 'flex', alignItems: 'center'}}>
             <div>
                 <Link to="/">
-                    <img src={logo} alt="Logo" style={{ height: '40px', width: '40px', padding: '10px' }} />
+                    <img src={logo} alt="Logo" className="h-10 w-10 p-2" />
                 </Link>
             </div>
-            <div style={{ marginRight: '20px' }}>
+            <div className="mr-5">
                 <Link to='/features' className="custom-link">
                     <div className="title">
-                        <h2>Features</h2>
+                        <h2 className="text-lg">Features</h2>
                     </div>
                 </Link>
             </div>
-            <div style={{ marginRight: '20px' }}>
+            <div className="mr-5">
                 <Link to='/chatbot' className="custom-link">
                     <div className="title">
-                        <h2>ChatBot</h2>
+                        <h2 className="text-lg">ChatBot</h2>
                     </div>
                 </Link>
             </div>
-            <div style={{ marginRight: '20px' }}>
+            <div className="mr-5">
                 <Link to='/analysis' className="custom-link">
                     <div className="title">
-                        <h2>Analysis</h2>
+                        <h2 className="text-lg">Analysis</h2>
                     </div>
                 </Link>
             </div>

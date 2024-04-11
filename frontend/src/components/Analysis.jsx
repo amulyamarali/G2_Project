@@ -90,9 +90,9 @@ function Analysis() {
     const industryCounts = Object.values(industry);
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '400vh', }}>
+        <div flex flex-col items-center h-screen>
             {/* <NavBar /> */}
-            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px', overflow: "auto", marginLeft: "20px" }}>
+            <div className="dataCard categoryCard h-96 w-96 overflow-auto ml-5">
                 <Doughnut
                     data={{
                         labels: labels,
@@ -133,7 +133,7 @@ function Analysis() {
                 />
             </div>
 
-            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft: "20px" }}>
+            <div className="h-96 w-96 overflow-auto mt-8 ml-5">
                 <Bar
                     data={{
                         labels: labels2,
@@ -174,7 +174,7 @@ function Analysis() {
                 />
             </div>
 
-            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft: "20px" }}>
+            <div className="h-96 w-96 overflow-auto mt-8 ml-5">
                 <Pie
                     data={{
                         labels: pieLabels,
@@ -212,7 +212,7 @@ function Analysis() {
                 />
             </div>
 
-            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px', marginTop: "30px",  overflow: "auto", marginLeft: "20px" }}>
+            <div className="dataCard categoryCard h-96 w-96 mt-8 overflow-auto ml-5">
                 <Bar
                     data={{
                         labels: reqLabels,
@@ -242,7 +242,7 @@ function Analysis() {
                 />
             </div>
 
-            <div style={{ height: '400px', width: '400px', overflow: "auto", marginTop: "30px", marginLeft: "20px" }}>
+            <div className="h-96 w-96 overflow-auto mt-8 ml-5">
                 <Doughnut
                     data={{
                         labels: roleLabels,
@@ -283,8 +283,8 @@ function Analysis() {
                 />
             </div>
 
-            <div className="dataCard categoryCard" style={{ height: '400px', width: '400px',  marginTop: "30px", overflow: "auto", marginLeft: "20px" }}>
-            <Bar
+            <div className="dataCard categoryCard h-96 w-96 mt-8 overflow-auto ml-5">
+            <Line
                     data={{
                         labels: industryLabels,
                         datasets: [

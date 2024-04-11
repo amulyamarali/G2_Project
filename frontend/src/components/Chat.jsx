@@ -21,23 +21,13 @@ function Chat() {
     const navigate = useNavigate();  // Initialize navigate
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh',  }}>
+        <div className="flex flex-col items-center h-screen">
             {/* <NavBar /> */}
             {/* <Landing />  */}
             {messages.map((message, index) => (
-                <div key={index} className={message.sender} style={{
-                    display: 'flex',
-                    justifyContent: message.sender === 'user' ? 'flex-end' : 'flex-start',
-                    width: '100%',
-                    padding: '10px',
-                    margin: message.sender === 'user' ? '10px 10px 10px 0' : '10px 0 10px 10px'
-                }}>
-                    <div style={{
-                        backgroundColor: message.sender === 'user' ? '#d1e7dd' : '#f08080',
-                        padding: '10px',
-                        borderRadius: '10px'
-                    }}>
-                        <p>{message.sender === 'bot' ? '🤖 ' : '👤 '}{message.text}</p>
+                <div key={index} className={`${message.sender} flex w-full px-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'} my-2 ${message.sender === 'user' ? 'mr-2' : 'ml-2'}`}>
+                    <div className={`${message.sender === 'user' ? 'bg-green-200' : 'bg-red-200'} px-2 rounded-md`}>
+                        <p className="text-base">{message.sender === 'bot' ? '🤖 ' : '👤 '}{message.text}</p>
                     </div>
                 </div>
             ))}
@@ -45,15 +35,8 @@ function Chat() {
             <input 
                 value={input} 
                 onChange={e => setInput(e.target.value)} 
-                style={{
-                    width: '400px', // make the input box wider
-                    padding: '10px', // add some padding to make it bulkier
-                    fontSize: '16px', // increase font size
-                    margin: '0 10px', // add some margin to the top and bottom
-                    alignItems: 'center'
-                }}
-            />
-            <button onClick={sendMessage}>Send</button>
+                className="w-96 px-2 text-base my-2 items-center border-2 border-solid border-gray-500"/>
+            <button className="px-4 py-2 bg-red-400 text-white rounded-md" onClick={sendMessage}>Send</button>
         </div>
     );
 }

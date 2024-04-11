@@ -18,7 +18,7 @@ accumulated all reviews, use an algorithm to find the customer asks. The results
 printed on the console.
 
 ## Proposed Solution 
-![alt text](image.png)
+![alt text](images/image.png)
 
 By integrating the robust features of a Chrome extension, an AI-powered chatbot, and G2's comprehensive API endpoints, users can effortlessly access and analyze G2 reviews to pinpoint customer requests for a wide array of products and services. This all-encompassing solution approach harnesses advanced technologies such as Natural Language Processing (NLP) and conversational AI to deliver actionable insights, thereby facilitating informed decision-making. Additionally, it showcases the powerful features of G2, providing a holistic view of customer feedback. 🚀
 
@@ -41,7 +41,7 @@ once the ```dist``` folder is created, follow the below steps:
 
 If the steps are correctly followed then should be able to see the **G2 logo** in your extensions bar
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 
 2) To run the server
@@ -62,15 +62,15 @@ If the `server.py` runs fine then you should be able to see `Running on http://1
 
 ## Output
 ### 1) For the **Chatbot**
-<img src="image-2.png" alt="alt text" width="400"/>
+<img src="images/image-2.png" alt="alt text" width="400"/>
 
 
 ### 2) For the **Features**
-<img src="image-3.png" alt="alt text" width="400"/>
+<img src="images/image-3.png" alt="alt text" width="400"/>
 
-<img src="image-4.png" alt="alt text" width="400"/>
+<img src="images/image-4.png" alt="alt text" width="400"/>
 
 
 ### 3) For the **Analysis**
-<img src="image-5.png" alt="alt text" width="400"/>
+<img src="images/image-5.png" alt="alt text" width="400"/>
 
